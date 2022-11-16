@@ -3,6 +3,7 @@ package com.example.instagramclone;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,10 +27,12 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
     private Button btnGetAllData;
     private String allKickBoxers;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+
 
         edtName = findViewById(R.id.edtName);
         edtPunchSpeed = findViewById(R.id.edtPunchSpeed);
@@ -42,6 +45,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
 
         txtGetData = findViewById(R.id.txtGetData);
         btnGetAllData = findViewById(R.id.btnGetAllData);
+
 
         txtGetData.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +72,8 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
             public void onClick(View view) {
                 allKickBoxers = "";
                 ParseQuery<ParseObject> queryAll = ParseQuery.getQuery("KickBoxer");
+                // get all the objects where the punch_power is grater than 4000
+                queryAll.whereGreaterThan("kick_power",4000);
                 // we use findInBackground to get all object
                 queryAll.findInBackground(new FindCallback<ParseObject>() {
                     @Override
@@ -82,7 +88,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
                                 FancyToast.makeText(SignUp.this, allKickBoxers, FancyToast.LENGTH_LONG,
                                         FancyToast.SUCCESS, true).show();
                             }else {
-                                FancyToast.makeText(SignUp.this,e.getMessage(), FancyToast.LENGTH_LONG,
+                                FancyToast.makeText(SignUp.this, "no kickBoxer", FancyToast.LENGTH_LONG,
                                         FancyToast.ERROR,true).show();
                             }
                         }
@@ -90,8 +96,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
                 });
             }
         });
-
-
+        
 
     }
 
