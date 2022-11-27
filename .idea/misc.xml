@@ -3,8 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Mps computer/AndroidStudioProjects/InstagramClone/app/src/main/res/drawable/login_button.xml" value="0.135" />
+        <entry key="..\:/Users/Mps computer/AndroidStudioProjects/InstagramClone/app/src/main/res/font/font.xml" value="0.13547297297297298" />
+        <entry key="..\:/Users/Mps computer/AndroidStudioProjects/InstagramClone/app/src/main/res/layout/activity_login.xml" value="0.13999999999999999" />
         <entry key="..\:/Users/Mps computer/AndroidStudioProjects/InstagramClone/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
         <entry key="..\:/Users/Mps computer/AndroidStudioProjects/InstagramClone/app/src/main/res/layout/activity_sign_up.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/Mps computer/AndroidStudioProjects/InstagramClone/app/src/main/res/layout/activity_social_media.xml" value="0.11655405405405406" />
+        <entry key="..\:/Users/Mps computer/AndroidStudioProjects/InstagramClone/app/src/main/res/layout/activity_welcome.xml" value="0.1" />
         <entry key="..\:/Users/Mps computer/AndroidStudioProjects/InstagramClone/app/src/main/res/layout/signup_login_activity.xml" value="0.13999999999999999" />
       </map>
     </option>
