@@ -64,8 +64,8 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         // Here I'm simply making sure that the parse user is valid and logged in.
         // If the parse user is valid,
         if(ParseUser.getCurrentUser() != null){
-            transitionToSocialMediaActivity();
-           // ParseUser.getCurrentUser().logOut();
+           // transitionToSocialMediaActivity();
+            ParseUser.getCurrentUser().logOut();
         }
 
     }
