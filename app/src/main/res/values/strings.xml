@@ -10,4 +10,10 @@
     <string name="email_or_username">Email or Username</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="please_enter_your_favorite_sport">Please enter your favorite sport...</string>
+    <string name="please_enter_a_profile_name">Please enter a profile name...</string>
+    <string name="please_enter_your_bio">Please enter your bio...</string>
+    <string name="please_enter_your_profession">Please enter your profession...</string>
+    <string name="please_enter_your_hobbies">Please enter your hobbies...</string>
+    <string name="update_info">Update info</string>
 </resources>

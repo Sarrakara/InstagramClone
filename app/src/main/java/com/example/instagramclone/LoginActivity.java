@@ -3,6 +3,7 @@ package com.example.instagramclone;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -72,13 +73,18 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             FancyToast.LENGTH_LONG, FancyToast.INFO, false).show();
                 }else {
 
+                    // show a progress dialog when the process of signing is happening
+                    ProgressDialog progressDialog = new ProgressDialog(this);
+                    progressDialog.setMessage("Logging" );
+                    progressDialog.show();
+
                     ParseUser.logInInBackground(edtLoginEmail.getText().toString(),
                             edtLoginPassword.getText().toString(), new LogInCallback() {
                                 @Override
                                 public void done(ParseUser user, ParseException e) {
                                     if (user != null && e == null) {
                                         FancyToast.makeText(LoginActivity.this, user.getUsername()
-                                                        + " is logged in", FancyToast.LENGTH_LONG, FancyToast.SUCCESS,
+                                                        + " is logged in", FancyToast.LENGTH_SHORT, FancyToast.SUCCESS,
                                                 false).show();
 
                                         edtLoginEmail.setText("");
@@ -87,7 +93,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                                     } else {
 
+                                        FancyToast.makeText(LoginActivity.this, e.getMessage(),
+                                                FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
                                     }
+                                    progressDialog.dismiss();
                                 }
                             });
                 }
