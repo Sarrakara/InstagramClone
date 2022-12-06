@@ -67,7 +67,7 @@ public class UsersTab extends Fragment {
                         }
 
                        listView.setAdapter(arrayAdapter);
-                       txtLoadingUsers.animate().alpha(0).setDuration(1000);
+                       txtLoadingUsers.animate().alpha(0).setDuration(500);
                        listView.setVisibility(View.VISIBLE);
                        // because we already set it to gone in the xml file
 

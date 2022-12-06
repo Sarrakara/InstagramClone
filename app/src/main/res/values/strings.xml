@@ -16,4 +16,6 @@
     <string name="please_enter_your_profession">Please enter your profession...</string>
     <string name="please_enter_your_hobbies">Please enter your hobbies...</string>
     <string name="update_info">Update info</string>
+    <string name="please_enter_a_description_for_your_image">Please enter a description for your image...</string>
+    <string name="share_image">Share image</string>
 </resources>
