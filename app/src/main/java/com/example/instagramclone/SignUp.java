@@ -143,5 +143,9 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
     private void transitionToSocialMediaActivity(){
         Intent intent = new Intent(SignUp.this, SocialMediaActivity.class);
         startActivity(intent);
+        /* finish the signup activity after the transition to socialMediaActivity (there will be
+        no sign up activity) because se don't want the user to go back to the login activity
+         when he presses on the back button*/
+        finish();
     }
 }

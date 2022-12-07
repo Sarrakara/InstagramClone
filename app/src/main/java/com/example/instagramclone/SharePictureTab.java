@@ -216,6 +216,8 @@ public class SharePictureTab extends Fragment implements View.OnClickListener {
                      if (result){
                          // Permission is granted. Continue the action or workflow in your app.
                          getChosenImage();
+
+                     }else{
                          // Explain to the user that the feature is unavailable because the
                          // feature requires a permission that the user has denied. At the
                          // same time, respect the user's decision. Don't link to system

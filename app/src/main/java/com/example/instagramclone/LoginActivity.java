@@ -123,5 +123,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void transitionToSocialMediaActivity(){
         Intent intent = new Intent(LoginActivity.this, SocialMediaActivity.class);
         startActivity(intent);
+        /* finish the login activity after the transition to socialMediaActivity (there will be
+        no login activity) because se don't want the user to go back to the login activity
+         when he presses on the back button */
+        finish();
     }
 }
