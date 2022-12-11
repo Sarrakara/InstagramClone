@@ -132,6 +132,10 @@ public class SharePictureTab extends Fragment implements View.OnClickListener {
 
                             /* convert the image to an array of byte to can upload it easily to
                               the server */
+                            final ProgressDialog progressDialog = new ProgressDialog(getContext());
+                            progressDialog.setMessage("loading...");
+                            progressDialog.show();
+                            
                             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
                             receivedImageBitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
                             byte[] bytes = byteArrayOutputStream.toByteArray();
@@ -143,9 +147,8 @@ public class SharePictureTab extends Fragment implements View.OnClickListener {
                             photoObject.put("image_description", edtDescription.getText().toString());
                             // pass the username of the current user that has uploaded the image to the server
                             photoObject.put("username", ParseUser.getCurrentUser().getUsername());
-                            final ProgressDialog progressDialog = new ProgressDialog(getContext());
-                            progressDialog.setMessage("loading...");
-                            progressDialog.show();
+
+
                             photoObject.saveInBackground(new SaveCallback() {
                                 @Override
                                 public void done(ParseException e) {

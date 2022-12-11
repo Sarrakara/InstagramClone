@@ -9,7 +9,7 @@
 
 
     <EditText
-        android:id="@+id/edtPrifileName"
+        android:id="@+id/edtProfileName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -34,7 +34,7 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPrifileName" />
+        app:layout_constraintTop_toBottomOf="@+id/edtProfileName" />
 
     <EditText
         android:id="@+id/edtProfileProfession"

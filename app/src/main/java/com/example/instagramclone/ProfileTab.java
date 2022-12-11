@@ -49,7 +49,7 @@ public class ProfileTab extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile_tab, container, false);
-        edtProfileName = view.findViewById(R.id.edtPrifileName);
+        edtProfileName = view.findViewById(R.id.edtProfileName);
         edtProfileBio = view.findViewById(R.id.edtProfileBio);
         edtProfileProfession = view.findViewById(R.id.edtProfileProfession);
         edtProfileHobbies = view.findViewById(R.id.edtProfileHobbies);

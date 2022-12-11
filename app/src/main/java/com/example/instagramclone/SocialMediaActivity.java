@@ -52,6 +52,7 @@ public class SocialMediaActivity extends AppCompatActivity {
 
         setTitle("Social Media App");
 
+
         toolbar = findViewById(R.id.myToolbar);
         // set this toolbar as the action bar of our social media activity
         setSupportActionBar(toolbar);
